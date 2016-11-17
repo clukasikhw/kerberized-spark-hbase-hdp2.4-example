@@ -42,3 +42,11 @@ kinit -kt /etc/security/keytabs/smokeuser.headless.keytab ambari-qa-CRAIG_A@EXAM
 
 ```
 Note: This example is suitable for short-lived jobs that do not exceed the lifetime of the kerberos token
+
+## Adjusting for your environment
+Adjust the versions in the `pom.xml` file to match the exact versions of spark, hbase and hadoop on your cluster. The `hdp-select` script can inform you of the versions. These properties in the pom can be adjusted:
+```
+        <hadoop.version>2.7.1.2.4.2.0-258</hadoop.version>
+        <hbase.version>1.1.2.2.4.2.0-258</hbase.version>
+        <spark.version>1.6.1.2.4.2.0-258</spark.version>
+```
