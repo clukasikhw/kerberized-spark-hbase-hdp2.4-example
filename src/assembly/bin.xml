@@ -1,0 +1,30 @@
+<assembly>
+    <id>bin</id>
+    <!--  START SNIPPET: formats  -->
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <fileSets>
+        <fileSet>
+            <includes>
+                <include>README*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/sh</directory>
+            <outputDirectory>sh</outputDirectory>
+            <includes>
+                <include>*.sh</include>
+            </includes>
+            <lineEnding>unix</lineEnding>
+            <fileMode>0755</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory>lib</outputDirectory>
+            <includes>
+                <include>*-*.jar</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
