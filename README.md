@@ -1,7 +1,7 @@
 # kerberized-spark-hbase-hdp2.4-example
 An example application that demonstrates how to use Spark to interact with HBase via both the HBase API for a Get op and via an RDD that leverages the HBase InputFormat.
 
-# How to run:
+## How to build and run the example:
 ```
 # first build the package on your computer (mvn package)
 # transfer the tar.gz file to the edge node
@@ -41,3 +41,4 @@ kinit -kt /etc/security/keytabs/smokeuser.headless.keytab ambari-qa-CRAIG_A@EXAM
 #
 
 ```
+Note: This example is suitable for short-lived jobs that do not exceed the lifetime of the kerberos token
